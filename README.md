@@ -1,21 +1,21 @@
-# westcave Dot Files
+# Innovation Lab Pairing Station Dot Files
 
-These are the configuration files I want to have in every Linux box I use.
+These are the configuration files I want to have on every pairing station I use.
 
-Original files copied from jdevera/dotfiles. As these are highly preferential,
-I don't recommend a fork.
+Original files copied from [westcave](https://github.com/westcave/dotfiles).
+They were then adapted for use with OS X and Linux-specific configuration was
+removed.
 
 ## Installation
 
-    git clone git://github.com/westcave/dotfiles ~/.dotfiles
-    cd ~/.dotfiles
-    bash install
-
+    git clone git://github.com/nordstrom-innovation/dotfiles.git ~/.dotfiles
+    ~/.dotfiles/install
 
 ## Contents
 
-Most files handle Bash or Vim configuration, additional files for utilities
-such as GNU Screen and Git.
+Most files handle Bash and text editor configuration (Vim, and TextMate 2, so far),
+as well as additional files for configuring utilities such as iTerm2,
+GNU Screen, Git, ack and rvm.
 
 ### Configuration file generators
 
