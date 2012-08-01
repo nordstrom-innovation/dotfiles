@@ -9,7 +9,8 @@ removed.
 ## Installation
 
     git clone git://github.com/nordstrom-innovation/dotfiles.git ~/.dotfiles
-    ~/.dotfiles/install
+    cd ~/.dotfiles
+    ./install
 
 ## Contents
 
