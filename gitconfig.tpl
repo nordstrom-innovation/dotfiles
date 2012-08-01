@@ -10,15 +10,21 @@ cat <<EOF
   email = $GIT_EMAIL
 [core]
   excludesfile = $HOME/.gitignore
-  editor = mate -w
+  editor = $EDITOR
 [github]
   user = $GITHUB_USER
   token = !security 2>&1 >/dev/null find-generic-password -gs \"Github API Token\" | ruby -e 'print $1 if STDIN.gets =~ /^password: \\\"(.*)\\\"$/'
 [merge]
   tool = opendiff
+[apply]
+  autocrlf = false
+  # whitespace = fix
+[branch]
+  autosetupmerge = true
 [credential]
   helper = cache --timeout=3600
 [color]
+  ui = auto
   diff = auto
   status = auto
   branch = auto
@@ -30,7 +36,9 @@ cat <<EOF
   co = checkout
   df = diff
   lg = log -p
+  sta = stash
   who = shortlog -s --
+  llog = log --date=local
   slog  = !git --no-pager log --format=oneline --abbrev-commit
   dfnp  = !git --no-pager diff
   up = !sh -c 'git pull --rebase --prune && git log --pretty=format:\"%Cred%ae %Creset- %C(yellow)%s %Creset(%ar)\" HEAD@{1}..'
