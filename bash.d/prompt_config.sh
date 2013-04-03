@@ -11,6 +11,9 @@ fi
 #   $debian_chroot  Current chroot (if any)
 #   `__git_ps1`     Current git branch if any
 #
+
+source "/usr/local/etc/bash_completion.d/git-prompt.sh"
+
 PS1NOCOLOR='\[\033[0m\]${debian_chroot:+($debian_chroot)}\u@\h:\w`__git_ps1`\$ '
 PS1NOCOLOR='\u@\h:\w`__git_ps1`\$ '
 PS1="\[\033[0m\]$PS1NOCOLOR"
