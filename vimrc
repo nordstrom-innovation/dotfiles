@@ -281,7 +281,8 @@ silent! colorscheme solarized
 if has('win32') || has('win64')
   set guifont=Lucida\ Console:h12
 elseif has('macunix')
-  set guifont=Droid\ Sans\ Mono:h16
+  set guifont=Inconsolata-g:h16
+  "Droid\ Sans\ Mono:h16
 elseif has('unix')
   set guifont=Droid\ Sans\ Mono\ 11
 endif
