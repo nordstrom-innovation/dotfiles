@@ -10,8 +10,9 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 if [[ $OSTYPE = darwin* ]]; then
   export CLICOLOR=1
-  export LSCOLORS=gxfxbEaEBxxEhEhBaDaCaD
-  # Tell grep to highlight matches
-  export GREP_OPTIONS='--color=auto'
+  rt TERM='xterm-color'
+  alias ls='ls -G'
+  alias ll='ls -lG'
+  export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+  export GREP_OPTIONS="--color"
 fi
-
