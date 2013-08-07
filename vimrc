@@ -66,7 +66,6 @@ Bundle 'pangloss/vim-javascript'          , {'name': 'javascript'}
 Bundle 'hallison/vim-markdown'            , {'name': 'markdown'}
 Bundle 'matchit.zip'                      , {'name': 'matchit'}
 Bundle 'scrooloose/nerdcommenter'         , {'name': 'nerdcommenter'}
-Bundle 'xolox/vim-notes'                  , {'name': 'notes'}
 Bundle 'ajf/puppet-vim'                   , {'name': 'puppet'}
 Bundle 'pylint.vim'                       , {'name': 'pylint'}
 Bundle 'python.vim--Vasiliev'             , {'name': 'python-syntax'}
