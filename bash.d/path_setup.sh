@@ -100,5 +100,4 @@ delfrompath()
 
 pathprepend "/usr/local/bin"
 pathprepend "$HOME/.bin"
-pathappend "$HOME/.rvm/bin" # Add RVM to PATH for scripting
 pathprepend "/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
