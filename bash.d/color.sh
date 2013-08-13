@@ -10,9 +10,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 if [[ $OSTYPE = darwin* ]]; then
   export CLICOLOR=1
-  rt TERM='xterm-color'
   alias ls='ls -G'
   alias ll='ls -lG'
-  export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
+  export LSCOLORS="gxfxbEaEBxxEhEhBaDaCaD"
   export GREP_OPTIONS="--color"
 fi
