@@ -58,6 +58,6 @@ complete -C _complete_ansi_color -o default ansi_color
 # ---------------------------------------------------------------------------
 
 
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+if [[ -d `brew --prefix`/etc/bash_completion.d ]]; then
+  source_dir /usr/local/etc/bash_completion.d
 fi
