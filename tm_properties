@@ -1,4 +1,3 @@
-rvm_bin_path          = "$HOME/.rvm/bin"
 TM_GIT                = "/usr/local/bin/git"
 
 # fontName            = "Inconsolata-dz"
@@ -7,7 +6,7 @@ TM_GIT                = "/usr/local/bin/git"
 fontName              = "Monaco"
 fontSize              = 13
 
-windowTitle           = "$TM_DISPLAYNAME${TM_DIRECTORY/\A(?:\/Users\/emmanuel\w+\/?(.*)|(.+))\z/${2:? – ${2/\A\/Users\/emmanuel/~/}:${1/\A(?=.)/ – /}}/} (${TM_SCM_BRANCH:-none})"
+windowTitle           = "${TM_FILEPATH:?${TM_FILEPATH/${projectDirectory}.//}:$TM_DISPLAYNAME}$windowTitleProject (${TM_SCM_BRANCH:-none})"
 
 include               = "{$include,.rspec,.env}"
 exclude               = "{$exclude,tmp/cache*,tmp/capybara*}"
@@ -16,6 +15,11 @@ excludeInFolderSearch = "{$excludeInFolderSearch,log/*.log}"
 # excludeInFolderSearch = ""
 # excludeInFileChooser  = "{$exclude,*.}"
 # exclude, excludeFiles, excludeDirectories, excludeInBrowser, excludeInFolderSearch, excludeInFileChooser, excludeFilesInBrowser
+
+showInvisibles        = true
+
+[ target ]
+fileType              = "source.tm-properties"
 
 [ attr.file.unknown-type ]
 fileType              = "text.plain"
@@ -26,16 +30,18 @@ softTabs              = true
 # wrapColumn            = 80
 # wrapColumn            = "Use Window Frame" # choose one
 softWrap              = false
-showInvisibles        = true
 
+[ text ]
+softWrap              = true
+wrapColumn            = "Use Window Frame"
 
-[ target ]
-fileType              = "source.tm-properties"
+[ text.plain,text.markdown ]
+spellChecking         = true
+spellingLanguage      = 'en'
 
 # special per-filetype rules can be specified like so:
-[ *.{txt,md,mdown,markdown} ]
-spellChecking         = true
-# tabSize               = 4
+# [ *.{txt,md,mdown,markdown} ]
+# spellChecking         = true
 
 [ .git/COMMIT_EDITMSG ]
 softWrap              = true
